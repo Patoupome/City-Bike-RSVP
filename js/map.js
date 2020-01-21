@@ -52,9 +52,9 @@ var mapVelo = {
           $('#available').text(available);
           $('#status').text(status);
           if (status === 'Ouvert' && available > 0) {
-            $('#status').css({ 'background-color': 'green', color: 'white' });
+            $('#status').css({ 'background-color': '#29655E', color: 'white' });
           } else {
-            $('#status').css({ 'background-color': 'red', color: 'white' });
+            $('#status').css({ 'background-color': '#B93523', color: 'white' });
           }
         });
       }

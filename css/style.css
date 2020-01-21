@@ -10,73 +10,11 @@
 }
 
 body {
-  background: linear-gradient(110deg, #eef0f3 60%, #b8d7e6 60%);
+  background: linear-gradient(100deg, #eef0f3 60%, #b8d7e6 60%);
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #3a3a3a;
 }
-
-.nav-bar {
-  -webkit-box-shadow: 0 8px 6px -6px black;
-  -moz-box-shadow: 0 8px 6px -6px black;
-  box-shadow: 0 8px 6px -6px black;
-  background-color: #2468a1;
-  background-attachment: fixed;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-/*
-nav a {
-    color: #3a3a3a;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-}
-
-nav a:hover {
-    color: rgb(41, 170, 226)
-}
-
-nav a:before, nav a:after
-{
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    background: rgb(41, 170, 226);
-    content: "";
-    opacity: 0;
-    transition: all 0.3s;
-}
-
-nav a:before
-{
-    top: 0px;
-    transform: translateY(10px);
-}
-
-nav a:after
-{
-    bottom: 0px;
-    transform: translateY(-10px);
-}
-
-nav a:hover:before, nav a:hover:after
-{
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-nav a {
-    font-size: 1.1rem;
-}
-*/
 
 .logo {
   max-width: 50px;
@@ -87,11 +25,9 @@ nav a {
 .name {
   color: #3a3a3a;
   text-shadow: 0 0 50px hsla(0, 0%, 0%, 0.4);
-  font-size: 1rem;
-}
-
-.main-container {
-  margin-top: 110px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px 0 20px 0;
 }
 
 .slider-box {
@@ -140,8 +76,14 @@ nav a {
   width: 70px;
   height: 70px;
   position: relative;
-  background-color: rgb(41, 170, 226);
+  background-color: #2468a1;
   z-index: 100;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.arrow-container:hover,
+.btn-toggle:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .arrow {
@@ -169,21 +111,19 @@ nav a {
   bottom: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*width: 200px;*/
   height: 55px;
-  /*border-radius: 100px / 50px;*/
-  /*background-color: rgba(41, 170, 226, 0.372);*/
 }
 
 .btn-toggle {
   box-sizing: border-box;
   height: 55px;
-  border-color: transparent transparent transparent rgb(41, 170, 226);
+  border-color: transparent transparent transparent #2468a1;
   transition: 100ms all ease;
   will-change: border-width;
   cursor: pointer;
   background-color: transparent;
   padding: 0px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .play {
@@ -203,6 +143,7 @@ nav a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.welcome,
 .one,
 .two,
 .three,
@@ -211,28 +152,24 @@ nav a {
   min-width: 100%;
   height: 100%;
 }
-.one {
-  background: url('../images/Step-1.png') no-repeat center center;
-}
 
-.two {
-  background: url('../images/Step-2.png') no-repeat center center;
-}
-
-.three {
-  background: url('../images/Step-3.png') no-repeat center center;
-}
-
+.welcome,
+.one,
+.two,
+.three,
 .four {
-  background: url('../images/Step-4.png') no-repeat center center;
+  background: url('../images/radissonPic.jpg') no-repeat center center;
 }
 
 .step h4 {
   color: white;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
+  text-shadow: 0 0 50px hsla(0, 0%, 0%, 100ms);
+  background-color: #484f56;
   transform: translate(-50%, -50%);
+  padding: 10px;
 }
 
 .map-box {
@@ -252,8 +189,10 @@ nav a {
   width: 100%;
 }
 
+#status {
+  box-shadow: inset 0 5px px hsla(0, 0%, 0%, 0.2);
+}
 .ouvert {
-  background-color: green;
   color: white;
 }
 
@@ -290,19 +229,22 @@ button .click {
   text-align: center;
 }
 
-.map-box table,
-#map {
+.map-box,
+#map,
+table {
   font-size: 1.2em;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
-  box-shadow: 0 10px 6px -6px #777;
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   background-color: rgba(255, 255, 255, 0.845);
 }
 
 thead {
   text-align: center;
   padding: 10px;
-  background-color: rgb(41, 170, 226);
+  background-color: #2468a1;
   color: white;
 }
 
@@ -317,7 +259,7 @@ table td {
 .confirm,
 .cancel,
 #rsvp-btn {
-  background-color: rgb(41, 170, 226);
+  background-color: #2468a1;
   color: white;
 }
 
