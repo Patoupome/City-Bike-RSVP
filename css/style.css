@@ -50,6 +50,12 @@ body {
   max-width: calc(100% - 300px);
   margin: 0 auto;
   height: 100%;
+  background: url('../images/radissonPic.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .arrow-box {
@@ -153,14 +159,6 @@ body {
   height: 100%;
 }
 
-.welcome,
-.one,
-.two,
-.three,
-.four {
-  background: url('../images/radissonPic.jpg') no-repeat center center;
-}
-
 .step h4 {
   color: white;
   position: absolute;
@@ -187,10 +185,11 @@ body {
   margin: 20px;
   min-width: 390px;
   width: 100%;
+  display: none;
 }
 
 #status {
-  box-shadow: inset 0 5px px hsla(0, 0%, 0%, 0.2);
+  box-shadow: inset 0 3px 3px hsla(0, 0%, 0%, 0.2);
 }
 .ouvert {
   color: white;
@@ -229,7 +228,6 @@ button .click {
   text-align: center;
 }
 
-.map-box,
 #map,
 table {
   font-size: 1.2em;
@@ -238,7 +236,12 @@ table {
   -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
     0 15px 12px rgba(0, 0, 0, 0.22);
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  background-color: rgba(255, 255, 255, 0.845);
+  background-color: transparent;
+}
+
+table,
+#map {
+  background: rgba(255, 255, 255, 0.845);
 }
 
 thead {
@@ -292,11 +295,9 @@ form input {
   max-width: 100%;
   background-color: white;
   position: relative;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: inset 0 3px 3px hsla(0, 0%, 0%, 0.2);
+  -moz-box-shadow: inset 0 3px 3px hsla(0, 0%, 0%, 0.2);
+  box-shadow: inset 0 3px 3px hsla(0, 0%, 0%, 0.2);
 }
 
 .currentRsvp {

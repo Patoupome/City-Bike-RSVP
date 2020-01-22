@@ -11,10 +11,10 @@ var mapVelo = {
 
     mapVelo.map = new google.maps.Map($('#map')[0], {
       center: {
-        lat: 43.3,
-        lng: 5.4
+        lat: 43.293908,
+        lng: 5.3832352
       },
-      zoom: 15
+      zoom: 14.5
     });
 
     mapVelo.stationMarkers();
