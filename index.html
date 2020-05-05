@@ -8,118 +8,117 @@
     <link rel="icon" type="image/png" href="images/logo.png"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Louez un vélo à Marseille!</title>
+    <link rel="stylesheet" type="text/css" href="css/shared.css">
+    <title>Marseille City Bike Rental</title>
 </head>
 
 <body>
-    <section class="container-fluid p-0">
-        
-        <div class="container-fluid p-0 main-container">
-            <div class="name">Louez votre vélo à Marseille!</div>
+    <div class="container-fluid">
+        <nav class="navbar fixed-top">
+            <div class="name">Marseille City Bike Rental</div>
+        </nav>
 
-            <div class="row carousel">
-                <div class="step welcome active">
-                    <h4>Bienvenue</h4>
-                </div>
-                <div class="step one">
-                    <h4>Choisissez une station</h4>
-                </div>
-                <div class="step two">
-                    <h4>Valider</h4>
-                </div>
-                <div class="step three">
-                    <h4>Rentrez votre nom et votre prénom suivis d'une signature</h4>
-                </div>
-                <div class="step four">
-                    <h4>Reservation reussie!</h4>
-                </div>
+        <div class="row carousel">
+            <div class="step welcome active">
+                <h4>Bienvenue</h4>
             </div>
-
-            <div class="row align-middle map-box">
-                <div class= "col-10" id="map">
-
-                </div>
-                <div class="col-4 flex-column rsvp-box">
-                    <form class='infos'>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Détails de la station</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr> 
-                                    <th>Adresse </th>
-                                    <td scope="row" id="address" class="capitalize"> </td>
-                                </tr>
-                                <tr>
-                                    <th>Vélos disponibles</th>
-                                    <td id="available"></td>
-                                </tr>
-                                <tr>
-                                    <th>Statut</th>
-                                    <td id="status"></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><button id="rsvp-btn" class="click" type="submit">Réserver</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </form>
-                            
-                        
-                    <form class="reservation">
-                        <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Réservation</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th>Adresse</th>
-                                            <td scope="row" id="addressR" class="capitalize"></td>
-                                        </tr>
-                                        <tr> 
-                                            <th>Nom</th>
-                                            <td scope="row"><input type='text' name ='nom' id='nom' value="" value="submit" required> </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Prénom</th>
-                                            <td scope="row"><input type='text' name='prenom' value="" value="submit" required> </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <div class="signature">
-                                                    <canvas id="draw" width="200" height="150" required>
-                                                    </canvas>
-                                                    
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <button class="confirm" type="submit">Confirmer</button>
-                                                <button class="cancel cancelF">Annuler</button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                        </table>
-                        
-                    </form>
-                </div>
+            <div class="step one">
+                <h4>Choisissez une station</h4>
             </div>
-            <div class="row currentRsvp">
-                <h3>Informations sur votre réservation en cours</h3>
-                <p id=addressC class="capitalize"></p>
-                <p>Temps restant avant expiration: </p> 
-                <span id="countDown"></span></br>
-                <button class="cancel cancelRsv">Annuler la reservation</button>
+            <div class="step two">
+                <h4>Valider</h4>
+            </div>
+            <div class="step three">
+                <h4>Rentrez votre nom et votre prénom suivis d'une signature</h4>
+            </div>
+            <div class="step four">
+                <h4>Reservation reussie!</h4>
             </div>
         </div>
+
+        <div class="row flex-wrap align-middle map-box">
+            <div id="map">
+
+            </div>
+            <div class="flex-column align-self-top rsvp-box">
+                <form class='infos'>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Détails de la station</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <th>Adresse </th>
+                                <td scope="row" id="address" class="capitalize"> </td>
+                            </tr>
+                            <tr>
+                                <th>Vélos disponibles</th>
+                                <td id="available"></td>
+                            </tr>
+                            <tr>
+                                <th>Statut</th>
+                                <td id="status"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button id="rsvp-btn" class="click" type="submit">Réserver</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                        
+                    
+                <form class="reservation">
+                    <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Réservation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Adresse</th>
+                                        <td scope="row" id="addressR" class="capitalize"></td>
+                                    </tr>
+                                    <tr> 
+                                        <th>Nom</th>
+                                        <td scope="row"><input type='text' name ='nom' id='nom' value="" value="submit" required> </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Prénom</th>
+                                        <td scope="row"><input type='text' name='prenom' value="" value="submit" required> </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <div class="signature">
+                                                <canvas id="draw" width="200" height="150" required>
+                                                </canvas>
+                                                
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <button class="confirm" type="submit">Confirmer</button>
+                                            <button class="cancel map-only" type="button">Retourner à la carte</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                    </table>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="row currentRsvp">
+            <h3>Informations sur votre réservation en cours</h3>
+            <p id=addressC class="capitalize"></p>
+            <p>Temps restant avant expiration: </p> 
+            <span id="countDown"></span></br>
+            <button class="cancel cancelRsv">Annuler la reservation</button>
+        </div>
+    </div>
                 
-    </section>
     
 
     <script src="https://code.jquery.com/jquery-1.12.3.js" integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc=" crossorigin="anonymous"></script>

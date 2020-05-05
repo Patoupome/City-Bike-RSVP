@@ -7,27 +7,38 @@
 *::before,
 *::after {
   box-sizing: inherit;
+  color: #495056;
 }
 
 body {
-  background: linear-gradient(100deg, #eef0f3 60%, #b8d7e6 60%);
+  background: rgba(var(--b3f, 250, 250, 250), 1);
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  color: #3a3a3a;
 }
 
-.logo {
-  max-width: 50px;
-  max-height: 80px;
-  padding-bottom: 10px;
+nav {
+  background-color: rgba(var(--cdc, 255, 255, 255), 1);
+  position: fixed;
+  z-index: 1000;
+  height: 95px;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+button:hover {
+  box-shadow: inset 0 3px 3px hsla(0, 0%, 0%, 0.2);
+}
+
+.name,
+h3 {
+  color: #2468a1;
 }
 
 .name {
-  color: #3a3a3a;
-  text-shadow: 0 0 50px hsla(0, 0%, 0%, 0.4);
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 20px 0 20px 0;
+  font-size: 1.8rem;
+  text-align: left;
+  margin: 20px 0 20px 40px;
 }
 
 .slider-box {
@@ -41,19 +52,15 @@ body {
   position: relative;
   display: inline-block;
   text-align: center;
-  margin: auto;
   width: 100%;
   height: 650px;
+  margin-top: 110px;
 }
 
 .carousel-body {
-  max-width: calc(100% - 300px);
   margin: 0 auto;
   height: 100%;
   background: url('../images/radissonPic.jpg') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -82,7 +89,7 @@ body {
   width: 70px;
   height: 70px;
   position: relative;
-  background-color: #2468a1;
+  background-color: rgba(var(--cdc, 255, 255, 255), 1);
   z-index: 100;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
@@ -93,7 +100,7 @@ body {
 }
 
 .arrow {
-  border: solid rgb(36, 35, 35);
+  border: solid #2468a1;
   border-width: 0 11px 11px 0;
   display: inline-block;
   padding: 11px;
@@ -123,7 +130,8 @@ body {
 .btn-toggle {
   box-sizing: border-box;
   height: 55px;
-  border-color: transparent transparent transparent #2468a1;
+  border-color: transparent transparent transparent
+    rgba(var(--cdc, 255, 255, 255), 1);
   transition: 100ms all ease;
   will-change: border-width;
   cursor: pointer;
@@ -159,33 +167,48 @@ body {
   height: 100%;
 }
 
+.one {
+  background: url('../images/one.jpg') no-repeat center center;
+}
+
+.two {
+  background: url('../images/two.jpg') no-repeat center center;
+}
+
+.three {
+  background: url('../images/three.jpg') no-repeat center center;
+}
+
+.four {
+  background: url('../images/four.jpg') no-repeat center center;
+}
+
 .step h4 {
-  color: white;
+  color: #2468a1;
   position: absolute;
   top: 10%;
   left: 50%;
   text-shadow: 0 0 50px hsla(0, 0%, 0%, 100ms);
-  background-color: #484f56;
+  background-color: rgba(var(--cdc, 255, 255, 255), 1);
   transform: translate(-50%, -50%);
   padding: 10px;
 }
 
 .map-box {
   justify-content: center;
-  align-items: end;
 }
 
 #map {
-  height: 500px;
-  margin: 20px 20px;
+  overflow: hidden;
   position: relative;
+  height: 500px;
+  width: 100%;
 }
 
 .rsvp-box {
-  margin: 20px;
-  min-width: 390px;
-  width: 100%;
+  vertical-align: middle;
   display: none;
+  padding-top: 20px;
 }
 
 #status {
@@ -241,13 +264,17 @@ table {
 
 table,
 #map {
-  background: rgba(255, 255, 255, 0.845);
+  background: rgba(var(--cdc, 255, 255, 255), 1);
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
 }
 
 thead {
   text-align: center;
   padding: 10px;
-  background-color: #2468a1;
   color: white;
 }
 
@@ -271,7 +298,6 @@ table td {
 #rsvp-btn {
   margin: 10px;
   padding: 10px;
-  width: 25%;
 }
 
 .confirm:hover,
@@ -281,7 +307,7 @@ table td {
 }
 
 .cancel:hover {
-  background-color: rgba(210, 6, 6, 0.817);
+  background-color: rgb(185, 53, 35);
   color: white;
 }
 
@@ -301,26 +327,18 @@ form input {
 }
 
 .currentRsvp {
+  margin-top: 20px;
   display: none;
   position: relative;
-  background-color: #3a3a3a;
+  background-color: rgba(var(--cdc, 255, 255, 255), 1);
   color: white;
   text-align: center;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 .row {
   margin-right: 0px;
   margin-left: 0px;
-}
-
-@media screen and (max-width: 1098px) {
-  .col-4 {
-    min-width: 70%;
-  }
-
-  .col-7 {
-    min-width: 70%;
-  }
 }
 
 @media screen and (max-width: 655px) {
@@ -358,15 +376,5 @@ form input {
 
   .stop {
     border-width: 0px 0 0px 46px;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .col-4 {
-    min-width: 100%;
-  }
-
-  .col-7 {
-    min-width: 100%;
   }
 }
